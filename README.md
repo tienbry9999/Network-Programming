@@ -26,7 +26,7 @@ Học phần trang bị cho người học những kiến thức nền tảng c�
 
 ## 🚀 3. Các project đã thực hiện
 
-### [Khoá 16](./docs/projects/K15/README.md)
+### [Khoá 16](./docs/projects/K16/README.md)
 
 ## 📝 4. License
 
