@@ -61,6 +61,7 @@ MiniBank/
 ├─ User.java # Lớp mô tả người dùng (username, password, balance)
 └─ Utils.java # Tiện ích (format tiền tệ, xử lý chung)
 
+
 ## ▶️ 5. Cách chạy project trên Eclipse
 1. Clone hoặc tải project về máy.  
 2. Mở **Eclipse IDE** → Import → Existing Project → trỏ đến thư mục `MiniBank`.  
