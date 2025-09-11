@@ -53,13 +53,13 @@ Mục tiêu:
 
 MiniBank/
 └─ src/
-└─ MiniBank/
-├─ MainApp.java # Điểm khởi động chương trình
-├─ LoginScreen.java # Màn hình đăng nhập
-├─ Dashboard.java # Màn hình chính (quản lý tài khoản & giao dịch)
-├─ Transaction.java # Lớp mô tả giao dịch
-├─ User.java # Lớp mô tả người dùng (username, password, balance)
-└─ Utils.java # Tiện ích (format tiền tệ, xử lý chung)
+   └─ MiniBank/
+      ├─ MainApp.java       # 🚀 Điểm khởi động chương trình
+      ├─ LoginScreen.java   # 🔑 Màn hình đăng nhập
+      ├─ Dashboard.java     # 📊 Màn hình chính (quản lý tài khoản & giao dịch)
+      ├─ Transaction.java   # 💰 Lớp mô tả giao dịch
+      ├─ User.java          # 👤 Lớp mô tả người dùng (username, password, balance)
+      └─ Utils.java         # 🛠️ Tiện ích (format tiền tệ, xử lý chung)
 
 
 ## ▶️ 5. Cách chạy project trên Eclipse
