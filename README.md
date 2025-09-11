@@ -49,17 +49,17 @@ Mục tiêu:
 
 ---
 
-#🏗️ 4. Cấu trúc project
+## 🏗️ 4. Cấu trúc project
 
 MiniBank/
- └─ src/
-     └─ MiniBank/
-         ├─ MainApp.java        # Điểm khởi động chương trình
-         ├─ LoginScreen.java    # Màn hình đăng nhập
-         ├─ Dashboard.java      # Màn hình chính (quản lý tài khoản & giao dịch)
-         ├─ Transaction.java    # Lớp mô tả giao dịch
-         ├─ User.java           # Lớp mô tả người dùng (username, password, balance)
-         └─ Utils.java          # Tiện ích (format tiền tệ, xử lý chung)
+└─ src/
+└─ MiniBank/
+├─ MainApp.java # Điểm khởi động chương trình
+├─ LoginScreen.java # Màn hình đăng nhập
+├─ Dashboard.java # Màn hình chính (quản lý tài khoản & giao dịch)
+├─ Transaction.java # Lớp mô tả giao dịch
+├─ User.java # Lớp mô tả người dùng (username, password, balance)
+└─ Utils.java # Tiện ích (format tiền tệ, xử lý chung)
 
 ## ▶️ 5. Cách chạy project trên Eclipse
 1. Clone hoặc tải project về máy.  
