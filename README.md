@@ -69,7 +69,19 @@
 🚀 **3. Hình ảnh các chức năng**  
 
 ![Giao diện đăng nhập](image.png)
-
+Hình 1. Giao diện đăng nhập
+![Giao diện đăng ký](image-1.png)
+Hình 2. Giao diện đăng ký
+![Màn hình hiển thị giao diện chính](image-2.png)
+Hình 3. Màn hình hiển thị giao diện chính
+![Giao diện chuyển khoản](image-3.png)
+Hình 4. Giao diện chuyển khoản 
+![Giao diện thông tin chuyển khoản](image-4.png)
+Hình 5. Giao diện thông tin chuyển khoản 
+![Giao diện nạp tiền ](image-5.png)
+Hình 6. Giao diện nạp tiền
+![Giao diện rút tiền](image-6.png)
+Hình 7. Giao diện rút tiền
 📝 **4. Hướng dẫn cài đặt và sử dụng**  
 
 **🔧 Yêu cầu hệ thống**  
