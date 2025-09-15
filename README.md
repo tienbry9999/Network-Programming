@@ -19,64 +19,153 @@
 
 </div>
 
-# 🏦 Hệ thống quản lý ngân hàng mini
+📖 1. Giới thiệu hệ thống
 
-## 📖 1. Giới thiệu
-Đề tài **“Hệ thống quản lý ngân hàng mini”** được xây dựng bằng **Java (Swing)** trên **Eclipse IDE**.  
-Hệ thống mô phỏng các nghiệp vụ cơ bản trong ngân hàng như đăng nhập, quản lý tài khoản, nạp tiền, rút tiền, chuyển tiền và theo dõi lịch sử giao dịch.  
+Ứng dụng MiniBank được xây dựng bằng Java Swing cho phép người dùng quản lý tài khoản ngân hàng cá nhân với các chức năng nạp tiền, rút tiền, chuyển khoản, xem thông tin và quản lý lịch sử giao dịch.
 
-Mục tiêu:
-- Giúp sinh viên rèn luyện kỹ năng lập trình hướng đối tượng với Java.  
-- Thực hành xây dựng ứng dụng có giao diện đồ họa (GUI) với Swing.  
-- Hiểu rõ quy trình quản lý tài khoản và xử lý giao dịch ngân hàng ở mức đơn giản.  
+Hệ thống bao gồm:
 
----
+LoginScreen: giao diện đăng nhập và đăng ký tài khoản mới.
 
-## 🔧 2. Công nghệ và ngôn ngữ sử dụng
-- [![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/)  
-- IDE: **Eclipse IDE for Java Developers**  
-- GUI: **Java Swing**  
-- Lưu trữ dữ liệu: sử dụng **HashMap** (mô phỏng database trong bộ nhớ).  
+Dashboard: giao diện chính sau khi đăng nhập, hiển thị số dư và lịch sử giao dịch.
 
----
+User & Transaction: mô hình dữ liệu người dùng và giao dịch.
 
-## 🚀 3. Chức năng chính
-- 👤 **Đăng nhập**: người dùng nhập username và password để vào hệ thống.  
-- 💳 **Quản lý tài khoản**: hiển thị số dư, nạp tiền, rút tiền.  
-- 💰 **Chuyển tiền**: chuyển khoản giữa các tài khoản trong hệ thống.  
-- 📜 **Lịch sử giao dịch**: lưu lại và hiển thị các giao dịch đã thực hiện.  
-- 🔒 **Xử lý dữ liệu tạm thời**: sử dụng HashMap để quản lý thông tin người dùng và giao dịch.  
+Utils: xử lý lưu trữ dữ liệu vào file nhị phân (users.dat).
 
----
+Các chức năng chính
 
-## 🏗️ 4. Cấu trúc project
+🔑 Đăng nhập & Đăng ký tài khoản.
+💵 Nạp tiền vào tài khoản.
+🏧 Rút tiền từ tài khoản.
+💳 Chuyển khoản giữa các tài khoản.
+ℹ️ Xem thông tin tài khoản.
+🔑 Đổi mật khẩu.
+📜 Quản lý và hiển thị lịch sử giao dịch.
+🚪 Đăng xuất/Thoát ứng dụng.
 
-MiniBank/
-└─ src/
-   └─ MiniBank/
-      ├─ MainApp.java       # 🚀 Điểm khởi động chương trình
-      ├─ LoginScreen.java   # 🔑 Màn hình đăng nhập
-      ├─ Dashboard.java     # 📊 Màn hình chính (quản lý tài khoản & giao dịch)
-      ├─ Transaction.java   # 💰 Lớp mô tả giao dịch
-      ├─ User.java          # 👤 Lớp mô tả người dùng (username, password, balance)
-      └─ Utils.java         # 🛠️ Tiện ích (format tiền tệ, xử lý chung)
+🔧 2. Công nghệ sử dụng
+
+Ứng dụng MiniBank được xây dựng với các công nghệ sau:
+
+Java Core
+
+Sử dụng OOP để xây dựng các lớp User, Transaction, Utils giúp quản lý dữ liệu tài khoản và giao dịch.
+
+Collections (HashMap, ArrayList) để quản lý danh sách tài khoản và lịch sử giao dịch.
+
+Java Swing
+
+Xây dựng giao diện người dùng trực quan:
+
+JFrame: cửa sổ chính của ứng dụng.
+
+JLabel, JButton, JTextField, JPasswordField: các thành phần nhập/xuất dữ liệu.
+
+JTable + DefaultTableModel: hiển thị lịch sử giao dịch.
+
+JOptionPane: hiển thị thông báo và dialog nhập liệu.
+
+Lưu trữ dữ liệu
+
+Sử dụng Serialization (ObjectOutputStream, ObjectInputStream) để lưu và đọc dữ liệu người dùng từ file users.dat.
+
+Dữ liệu bao gồm thông tin người dùng, số dư, và lịch sử giao dịch.
+
+Hỗ trợ
+
+java.time.LocalDateTime: tạo timestamp cho mỗi giao dịch.
+
+java.text.DecimalFormat: định dạng tiền tệ (#,### VND).
+
+Random: sinh số tài khoản 8 chữ số ngẫu nhiên.
+
+🚀 3. Hình ảnh các chức năng
+
+📌 (Thêm ảnh chụp màn hình Login, Dashboard, lịch sử giao dịch, chuyển khoản...)
+
+📝 4. Hướng dẫn cài đặt và sử dụng
+🔧 Yêu cầu hệ thống
+
+Java Development Kit (JDK): phiên bản 8 trở lên
+
+Hệ điều hành: Windows, macOS, Linux
+
+IDE: Eclipse, IntelliJ IDEA, VS Code hoặc terminal
+
+Dung lượng bộ nhớ: tối thiểu 512MB RAM
+
+Dung lượng ổ đĩa: khoảng 10MB
+
+📦 Cài đặt và triển khai
+Bước 1: Chuẩn bị môi trường
+
+Kiểm tra Java:
+
+java -version
+javac -version
 
 
-## ▶️ 5. Cách chạy project trên Eclipse
-1. Clone hoặc tải project về máy.  
-2. Mở **Eclipse IDE** → Import → Existing Project → trỏ đến thư mục `MiniBank`.  
-3. Chạy file `MainApp.java`.  
-4. Màn hình đăng nhập sẽ hiện ra → nhập username và password (mặc định cấu hình trong `MainApp.java` hoặc `User.java`).  
+Đảm bảo kết quả hiển thị Java 8 trở lên.
 
----
+Tải mã nguồn: Thư mục MiniBank chứa các file:
 
-## 📚 6. Hướng phát triển
-- Thay thế HashMap bằng **cơ sở dữ liệu SQLite/MySQL** để lưu dữ liệu thật.  
-- Bổ sung chức năng quản lý nhiều người dùng, phân quyền (admin/user).  
-- Nâng cấp giao diện thân thiện hơn với **JavaFX** hoặc chuyển sang ứng dụng web.  
-- Tích hợp thêm chức năng tính lãi suất, quản lý khoản vay.  
+MainApp.java
 
----
+LoginScreen.java
 
-## 📝 7. License
-© 2025 [Tên nhóm hoặc khoa của bạn]. All rights reserved.
+Dashboard.java
+
+User.java
+
+Transaction.java
+
+Utils.java
+
+Bước 2: Biên dịch mã nguồn
+
+Mở terminal và điều hướng đến thư mục src:
+
+javac MiniBank/*.java
+
+
+Nếu thành công, sẽ tạo ra các file .class.
+
+Bước 3: Chạy ứng dụng
+
+Chạy ứng dụng với lệnh:
+
+java MiniBank.MainApp
+
+
+Ứng dụng sẽ hiển thị màn hình đăng nhập.
+
+🚀 Sử dụng ứng dụng
+
+Đăng nhập: nhập tên tài khoản và mật khẩu đã đăng ký.
+
+Đăng ký: tạo tài khoản mới, hệ thống sinh số tài khoản ngẫu nhiên.
+
+Nạp tiền: chọn "💵 Nạp tiền", nhập số tiền.
+
+Rút tiền: chọn "🏧 Rút tiền", nhập số tiền.
+
+Chuyển khoản: chọn "💳 Chuyển khoản", nhập số tài khoản người nhận và số tiền.
+
+Xem thông tin: chọn "ℹ️ Thông tin TK".
+
+Đổi mật khẩu: chọn "🔑 Đổi mật khẩu".
+
+Xem lịch sử giao dịch: bảng hiển thị chi tiết giao dịch ngay trên giao diện chính.
+
+Thoát: chọn "🚪 Thoát".
+
+👤 Thông tin cá nhân
+
+Họ  và tên: Đỗ Trọng Minh Tiến 
+
+Lớp: CNTT 16-03
+
+Email: dotrongminhtien.qc2004@gmail.com
+
+© 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
