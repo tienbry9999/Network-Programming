@@ -104,18 +104,17 @@ Transaction.java
 
 Utils.java
 
-- **Bước 2: Biên dịch mã nguồn** 
+- **Bước 2: Biên dịch mã nguồn**  
 
-bash
-Copy code
-javac MiniBank/*.java
+  ```bash
+  javac MiniBank/*.java
 Nếu thành công, sẽ tạo ra các file .class.
+
 
 - **Bước 3: Chạy ứng dụng** 
 
-bash
-Copy code
-java MiniBank.MainApp
+  ```bash
+  java MiniBank.MainApp
 Ứng dụng sẽ hiển thị màn hình đăng nhập.
 
 🚀 Sử dụng ứng dụng
