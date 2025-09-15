@@ -68,9 +68,7 @@
 
 🚀 **3. Hình ảnh các chức năng**  
 
-📌 (Thêm ảnh chụp màn hình **Login, Dashboard, lịch sử giao dịch, chuyển khoản...**)  
-
----
+![Giao diện đăng nhập](image.png)
 
 📝 **4. Hướng dẫn cài đặt và sử dụng**  
 
