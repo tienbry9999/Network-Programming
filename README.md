@@ -68,20 +68,48 @@
 
 🚀 **3. Hình ảnh các chức năng**  
 
-![Giao diện đăng nhập](image.png)
-Hình 1. Giao diện đăng nhập
-![Giao diện đăng ký](image-1.png)
-Hình 2. Giao diện đăng ký
-![Màn hình hiển thị giao diện chính](image-2.png)
-Hình 3. Màn hình hiển thị giao diện chính
-![Giao diện chuyển khoản](image-3.png)
-Hình 4. Giao diện chuyển khoản 
-![Giao diện thông tin chuyển khoản](image-4.png)
-Hình 5. Giao diện thông tin chuyển khoản 
-![Giao diện nạp tiền ](image-5.png)
-Hình 6. Giao diện nạp tiền
-![Giao diện rút tiền](image-6.png)
-Hình 7. Giao diện rút tiền
+<p align="center">
+  <img src="image.png" alt="Giao diện đăng nhập" width="500"/>
+  <br>
+  <em>Hình 1. Giao diện đăng nhập</em>
+</p>
+
+<p align="center">
+  <img src="image-1.png" alt="Giao diện đăng ký" width="500"/>
+  <br>
+  <em>Hình 2. Giao diện đăng ký</em>
+</p>
+
+<p align="center">
+  <img src="image-2.png" alt="Màn hình hiển thị giao diện chính" width="500"/>
+  <br>
+  <em>Hình 3. Màn hình hiển thị giao diện chính</em>
+</p>
+
+<p align="center">
+  <img src="image-3.png" alt="Giao diện chuyển khoản" width="500"/>
+  <br>
+  <em>Hình 4. Giao diện chuyển khoản</em>
+</p>
+
+<p align="center">
+  <img src="image-4.png" alt="Giao diện thông tin chuyển khoản" width="500"/>
+  <br>
+  <em>Hình 5. Giao diện thông tin chuyển khoản</em>
+</p>
+
+<p align="center">
+  <img src="image-5.png" alt="Giao diện nạp tiền" width="500"/>
+  <br>
+  <em>Hình 6. Giao diện nạp tiền</em>
+</p>
+
+<p align="center">
+  <img src="image-6.png" alt="Giao diện rút tiền" width="500"/>
+  <br>
+  <em>Hình 7. Giao diện rút tiền</em>
+</p>
+
 📝 **4. Hướng dẫn cài đặt và sử dụng**  
 
 **🔧 Yêu cầu hệ thống**  
