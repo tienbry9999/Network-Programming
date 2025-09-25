@@ -49,6 +49,7 @@ Kết nối **Client ↔ Server** qua **TCP Socket** với giao thức chuỗi l
 ---
 
 ## 3. Hình ảnh các chức năng
+![alt text](image-7.png)
 <p align="center">
   <img src="images/login.png" alt="Đăng nhập" width="800"/>
   <br/>
