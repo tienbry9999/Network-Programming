@@ -49,43 +49,48 @@ Kết nối **Client ↔ Server** qua **TCP Socket** với giao thức chuỗi l
 ---
 
 ## 3. Hình ảnh các chức năng
-![alt text](image-7.png)
 <p align="center">
+  <img src="image-7.png" alt="Đăng nhập" width="600"/>
   <br/>
   <em>Hình 1. Giao diện đăng nhập</em><br/>
 </p>
 
 ---
-![alt text](image-8.png)
+
 <p align="center">
+  <img src="image-8.png" alt="Đăng ký" width="600"/>
   <br/>
   <em>Hình 2. Giao diện đăng ký</em><br/>
 </p>
 
 ---
-![alt text](image-9.png)
+
 <p align="center">
+  <img src="image-9.png" alt="Màn hình chính" width="600"/>
   <br/>
   <em>Hình 3. Màn hình chính trang chủ</em><br/>
 </p>
 
 ---
-![alt text](image-10.png)
+
 <p align="center">
+  <img src="image-10.png" alt="Chuyển khoản" width="600"/>
   <br/>
   <em>Hình 4. Giao diện chuyển khoản</em><br/>
 </p>
 
 ---
-![alt text](image-11.png)
+
 <p align="center">
+  <img src="image-11.png" alt="Lịch sử giao dịch" width="600"/>
   <br/>
   <em>Hình 5. Lịch sử giao dịch</em><br/>
 </p>
 
 ---
-![alt text](image-12.png)
+
 <p align="center">
+  <img src="image-12.png" alt="Quản lý khách hàng" width="600"/>
   <br/>
   <em>Hình 6. Quản lý khách hàng</em><br/>
 </p>
