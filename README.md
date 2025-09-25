@@ -51,40 +51,44 @@ Kết nối **Client ↔ Server** qua **TCP Socket** với giao thức chuỗi l
 ## 3. Hình ảnh các chức năng
 ![alt text](image-7.png)
 <p align="center">
-  <img src="images/login.png" alt="Đăng nhập" width="800"/>
   <br/>
   <em>Hình 1. Giao diện đăng nhập</em><br/>
 </p>
 
 ---
+![alt text](image-8.png)
 <p align="center">
-  <img src="images/signup.png" alt="Đăng ký" width="800"/>
   <br/>
   <em>Hình 2. Giao diện đăng ký</em><br/>
 </p>
 
 ---
+![alt text](image-9.png)
 <p align="center">
-  <img src="images/dashboard.png" alt="Màn hình chính" width="800"/>
   <br/>
-  <em>Hình 3. Màn hình chính hiển thị số dư và giao dịch</em><br/>
+  <em>Hình 3. Màn hình chính trang chủ</em><br/>
 </p>
 
 ---
+![alt text](image-10.png)
 <p align="center">
-  <img src="images/transfer.png" alt="Chuyển khoản" width="800"/>
   <br/>
   <em>Hình 4. Giao diện chuyển khoản</em><br/>
 </p>
 
 ---
+![alt text](image-11.png)
 <p align="center">
-  <img src="images/history.png" alt="Lịch sử giao dịch" width="800"/>
   <br/>
   <em>Hình 5. Lịch sử giao dịch</em><br/>
 </p>
 
 ---
+![alt text](image-12.png)
+<p align="center">
+  <br/>
+  <em>Hình 6. Quản lý khách hàng</em><br/>
+</p>
 
 ## 4. Các bước cài đặt
 1. **Cài đặt môi trường**  
