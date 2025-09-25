@@ -21,103 +21,100 @@
 
 ---
 
-📖 **1. Giới thiệu hệ thống**  
+## 1. Giới thiệu hệ thống
+Hệ thống **MiniBank** gồm 2 tiến trình:  
+- **Server**: xử lý nghiệp vụ tài khoản, giao dịch và phản hồi yêu cầu.  
+- **Client**: ứng dụng giao diện **Java Swing** cho người dùng.  
 
-Ứng dụng **MiniBank** được phát triển bằng **Java Swing** cho phép quản lý tài khoản ngân hàng cá nhân với các chức năng cơ bản: **nạp tiền, rút tiền, chuyển khoản, đổi mật khẩu, xem số dư và lịch sử giao dịch**.  
+Các chức năng chính:  
+- Đăng nhập / Đăng ký tài khoản  
+- Nạp tiền, Rút tiền, Chuyển khoản  
+- Xem số dư, Lịch sử giao dịch, Đổi mật khẩu  
+- Đăng xuất, kết thúc phiên  
 
-**Các module chính:**  
-- `LoginScreen`: đăng nhập/đăng ký  
-- `Dashboard`: giao diện chính  
-- `AccountInfo`: xử lý dữ liệu tài khoản  
-- `Client/Server`: trao đổi và xử lý yêu cầu  
-
----
-
-🔧 **2. Công nghệ sử dụng**  
-
-- **Java Core**: OOP, Collections  
-- **Java Swing**: xây dựng giao diện  
-- **Lưu trữ file**: ghi/đọc dữ liệu tài khoản, lịch sử  
-- **Hỗ trợ**: `LocalDateTime`, `DecimalFormat`  
+Kết nối **Client ↔ Server** qua **TCP Socket** với giao thức chuỗi lệnh (`LOGIN`, `SIGNUP`, `XEM`, `GUI`, `RUT`, `CHUYEN`, `HISTORY`, `LOGOUT`).  
 
 ---
 
-🚀 **3. Hình ảnh các chức năng**  
+## 2. Ngôn ngữ & Công nghệ sử dụng
+<div align="center">
 
+[![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
+[![Swing](https://img.shields.io/badge/Java%20Swing-5382a1?style=for-the-badge&logo=java&logoColor=white)]()
+[![Socket](https://img.shields.io/badge/TCP%20Socket-black?style=for-the-badge)]()
+[![JDK](https://img.shields.io/badge/JDK-8%2B-green?style=for-the-badge)]()
+
+</div>
+
+---
+
+## 3. Hình ảnh các chức năng
 <p align="center">
-  <img src="image.png" alt="Giao diện đăng nhập" width="500"/>
-  <br>
-  <em>Hình 1. Giao diện đăng nhập</em>
+  <img src="images/login.png" alt="Đăng nhập" width="800"/>
+  <br/>
+  <em>Hình 1. Giao diện đăng nhập</em><br/>
 </p>
 
+---
 <p align="center">
-  <img src="image-1.png" alt="Giao diện đăng ký" width="500"/>
-  <br>
-  <em>Hình 2. Giao diện đăng ký</em>
+  <img src="images/signup.png" alt="Đăng ký" width="800"/>
+  <br/>
+  <em>Hình 2. Giao diện đăng ký</em><br/>
 </p>
 
+---
 <p align="center">
-  <img src="image-2.png" alt="Màn hình chính" width="500"/>
-  <br>
-  <em>Hình 3. Màn hình chính</em>
+  <img src="images/dashboard.png" alt="Màn hình chính" width="800"/>
+  <br/>
+  <em>Hình 3. Màn hình chính hiển thị số dư và giao dịch</em><br/>
 </p>
 
+---
 <p align="center">
-  <img src="image-3.png" alt="Giao diện chuyển khoản" width="500"/>
-  <br>
-  <em>Hình 4. Chuyển khoản</em>
+  <img src="images/transfer.png" alt="Chuyển khoản" width="800"/>
+  <br/>
+  <em>Hình 4. Giao diện chuyển khoản</em><br/>
 </p>
 
+---
 <p align="center">
-  <img src="image-4.png" alt="Thông tin chuyển khoản" width="500"/>
-  <br>
-  <em>Hình 5. Thông tin chuyển khoản</em>
-</p>
-
-<p align="center">
-  <img src="image-5.png" alt="Nạp tiền" width="500"/>
-  <br>
-  <em>Hình 6. Nạp tiền</em>
-</p>
-
-<p align="center">
-  <img src="image-6.png" alt="Rút tiền" width="500"/>
-  <br>
-  <em>Hình 7. Rút tiền</em>
+  <img src="images/history.png" alt="Lịch sử giao dịch" width="800"/>
+  <br/>
+  <em>Hình 5. Lịch sử giao dịch</em><br/>
 </p>
 
 ---
 
-📝 **4. Cài đặt & Sử dụng**  
+## 4. Các bước cài đặt
+1. **Cài đặt môi trường**  
+   - JDK 8 trở lên  
+   - IDE: IntelliJ IDEA / Eclipse / VS Code hoặc terminal  
 
-**Yêu cầu:** JDK 8+, Windows/macOS/Linux, IDE (Eclipse/IntelliJ/VS Code) hoặc terminal.  
+2. **Biên dịch & chạy chương trình**  
+   ```bash
+   # Biên dịch
+   javac MiniBank/*.java
 
-**Cách chạy:**  
-```bash
-# Biên dịch
-javac MiniBank/*.java
+   # Chạy server
+   java MiniBank.ServerMain
 
-# Chạy chương trình
-java MiniBank.MainApp
-Chức năng chính:
+   # Chạy client
+   java MiniBank.ClientLogin
+Sử dụng ứng dụng
 
-🔑 Đăng nhập / Đăng ký
+Đăng ký hoặc đăng nhập tài khoản
 
-💵 Nạp tiền | 🏧 Rút tiền | 💳 Chuyển khoản
+Nạp tiền, Rút tiền, Chuyển khoản
 
-ℹ️ Xem số dư | 📜 Lịch sử giao dịch
+Xem số dư, Lịch sử giao dịch, Đổi mật khẩu
+## 5. Thông tin liên hệ 
+Họ tên: Đỗ Trọng Minh Tiến
 
-🔑 Đổi mật khẩu | 🚪 Đăng xuất
+Lớp: CNTT 16-03
 
-## 5. Thông tin liên hệ  
-Họ tên: Đỗ Trọng Minh Tiến  
-Lớp: CNTT 16-03.  
 Email: dotrongminhtien.qc2004@gmail.com
 
 © 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
-
----
-
 
 
 
