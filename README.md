@@ -128,7 +128,7 @@ Chức năng chính:
 
 🔑 Đổi mật khẩu | 🚪 Đăng xuất
 
-📝 5. Thông tin liên hệ
+📝**5. Thông tin liên hệ**
 
 Họ tên: Đỗ Trọng Minh Tiến
 
