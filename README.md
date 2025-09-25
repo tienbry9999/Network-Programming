@@ -21,161 +21,124 @@
 
 📖 **1. Giới thiệu hệ thống**  
 
-Ứng dụng **MiniBank** được xây dựng bằng **Java Swing** cho phép người dùng quản lý tài khoản ngân hàng cá nhân với các chức năng **nạp tiền, rút tiền, chuyển khoản, xem thông tin và quản lý lịch sử giao dịch**.  
+Ứng dụng **MiniBank** được xây dựng bằng **Java (Swing + Socket)** theo mô hình **Client–Server**, cho phép người dùng quản lý tài khoản ngân hàng cá nhân với các chức năng: **đăng nhập, đăng ký, nạp tiền, rút tiền, chuyển khoản, đổi mật khẩu, xem số dư và lịch sử giao dịch**.  
 
 **Hệ thống bao gồm:**  
-- **LoginScreen**: giao diện đăng nhập và đăng ký tài khoản mới.  
-- **Dashboard**: giao diện chính sau khi đăng nhập, hiển thị số dư và lịch sử giao dịch.  
-- **User & Transaction**: mô hình dữ liệu người dùng và giao dịch.  
-- **Utils**: xử lý lưu trữ dữ liệu vào file nhị phân (`users.dat`).  
+- **Server.java**: chạy dịch vụ ngân hàng, quản lý dữ liệu tài khoản & khách hàng, xử lý lệnh từ client.  
+- **ClientLogin.java**: giao diện đăng nhập/đăng ký.  
+- **ClientMain.java** (hoặc `ClientDashboard`): giao diện chính sau khi đăng nhập (nạp/rút/chuyển tiền, xem lịch sử).  
+- **AccountInfo.java**: lớp quản lý tài khoản (số dư, mật khẩu, lịch sử giao dịch).  
+- **Tệp dữ liệu**:  
+  - `accounts.txt`: lưu thông tin tài khoản.  
+  - `customers.txt`: lưu thông tin khách hàng.  
+  - `server_port.txt`: cổng server đang chạy.  
 
 **Các chức năng chính:**  
 - 🔑 **Đăng nhập & Đăng ký tài khoản**  
 - 💵 **Nạp tiền vào tài khoản**  
 - 🏧 **Rút tiền từ tài khoản**  
 - 💳 **Chuyển khoản giữa các tài khoản**  
-- ℹ️ **Xem thông tin tài khoản**  
+- ℹ️ **Xem số dư và thông tin tài khoản**  
 - 🔑 **Đổi mật khẩu**  
 - 📜 **Quản lý và hiển thị lịch sử giao dịch**  
+- 👥 **Quản lý khách hàng (thêm, sửa, xóa, lấy danh sách)**  
 - 🚪 **Đăng xuất/Thoát ứng dụng**  
 
 ---
 
 🔧 **2. Công nghệ sử dụng**  
 
-Ứng dụng **MiniBank** được xây dựng với các công nghệ sau:  
+- **Java Core**  
+  - **OOP** để xây dựng các lớp `AccountInfo`, `Customer`.  
+  - **Collections** (`HashMap`, `ArrayList`, `Collections.synchronizedMap`) để quản lý dữ liệu.  
+  - **I/O** (`BufferedReader`, `PrintWriter`, `FileReader`, `FileWriter`) để lưu/đọc dữ liệu từ file.  
 
-**Java Core**  
-- **OOP** để xây dựng các lớp `User`, `Transaction`, `Utils`.  
-- **Collections** (`HashMap`, `ArrayList`) để quản lý danh sách tài khoản và lịch sử giao dịch.  
+- **Java Networking**  
+  - **ServerSocket / Socket** để giao tiếp **client–server**.  
+  - Giao thức tùy chỉnh với các lệnh (`LOGIN`, `SIGNUP`, `DEPOSIT`, `WITHDRAW`, `TRANSFER`, `BALANCE`, `HISTORY`, …).  
 
-**Java Swing**  
-- `JFrame`: **cửa sổ chính** của ứng dụng.  
-- `JLabel`, `JButton`, `JTextField`, `JPasswordField`: **các thành phần nhập/xuất dữ liệu**.  
-- `JTable` + `DefaultTableModel`: **hiển thị lịch sử giao dịch**.  
-- `JOptionPane`: **hiển thị thông báo và dialog nhập liệu**.  
+- **Java Swing**  
+  - `JFrame`, `JTabbedPane`, `JButton`, `JTextArea`, `JTextField`, `JPasswordField`.  
+  - `JOptionPane` để hiển thị thông báo.  
+  - `CardLayout` để chuyển đổi giữa login/signup.  
 
-**Lưu trữ dữ liệu**  
-- **Serialization** (`ObjectOutputStream`, `ObjectInputStream`) để **lưu và đọc dữ liệu** từ file `users.dat`.  
-- Dữ liệu bao gồm **thông tin người dùng, số dư, và lịch sử giao dịch**.  
-
-**Hỗ trợ**  
-- `java.time.LocalDateTime`: tạo **timestamp cho mỗi giao dịch**.  
-- `java.text.DecimalFormat`: định dạng **tiền tệ (#,### VND)**.  
-- `Random`: sinh **số tài khoản 8 chữ số ngẫu nhiên**.  
+- **Thư viện hỗ trợ**  
+  - `java.time.LocalDateTime` để tạo timestamp cho lịch sử giao dịch.  
+  - `Collections.synchronizedMap` & `synchronized` methods để đảm bảo **thread-safe**.  
 
 ---
 
-🚀 **3. Hình ảnh các chức năng**  
+🚀 **3. Hình ảnh giao diện**  
 
 <p align="center">
-  <img src="image.png" alt="Giao diện đăng nhập" width="500"/>
+  <img src="images/login.png" alt="Giao diện đăng nhập" width="500"/>
   <br>
   <em>Hình 1. Giao diện đăng nhập</em>
 </p>
 
 <p align="center">
-  <img src="image-1.png" alt="Giao diện đăng ký" width="500"/>
+  <img src="images/signup.png" alt="Giao diện đăng ký" width="500"/>
   <br>
   <em>Hình 2. Giao diện đăng ký</em>
 </p>
 
 <p align="center">
-  <img src="image-2.png" alt="Màn hình hiển thị giao diện chính" width="500"/>
+  <img src="images/dashboard.png" alt="Giao diện chính" width="500"/>
   <br>
-  <em>Hình 3. Màn hình hiển thị giao diện chính</em>
+  <em>Hình 3. Giao diện chính (Dashboard)</em>
 </p>
 
 <p align="center">
-  <img src="image-3.png" alt="Giao diện chuyển khoản" width="500"/>
+  <img src="images/transfer.png" alt="Giao diện chuyển khoản" width="500"/>
   <br>
   <em>Hình 4. Giao diện chuyển khoản</em>
 </p>
 
 <p align="center">
-  <img src="image-4.png" alt="Giao diện thông tin chuyển khoản" width="500"/>
+  <img src="images/history.png" alt="Xem lịch sử giao dịch" width="500"/>
   <br>
-  <em>Hình 5. Giao diện thông tin chuyển khoản</em>
+  <em>Hình 5. Lịch sử giao dịch</em>
 </p>
 
-<p align="center">
-  <img src="image-5.png" alt="Giao diện nạp tiền" width="500"/>
-  <br>
-  <em>Hình 6. Giao diện nạp tiền</em>
-</p>
-
-<p align="center">
-  <img src="image-6.png" alt="Giao diện rút tiền" width="500"/>
-  <br>
-  <em>Hình 7. Giao diện rút tiền</em>
-</p>
+---
 
 📝 **4. Hướng dẫn cài đặt và sử dụng**  
 
 **🔧 Yêu cầu hệ thống**  
-- **Java Development Kit (JDK)**: phiên bản 8 trở lên  
-- **Hệ điều hành**: Windows, macOS, Linux  
-- **IDE**: Eclipse, IntelliJ IDEA, VS Code hoặc terminal  
-- **RAM**: tối thiểu 512MB  
-- **Ổ đĩa**: khoảng 10MB  
+- **JDK**: 8 trở lên  
+- **OS**: Windows / macOS / Linux  
+- **IDE**: IntelliJ IDEA, Eclipse, VS Code, hoặc chạy bằng terminal  
 
-**📦 Cài đặt và triển khai**  
+**📦 Triển khai**  
 
-- **Bước 1: Chuẩn bị môi trường**  
-  Kiểm tra Java:  
-  ```bash
-  java -version
-  javac -version
-Đảm bảo kết quả hiển thị Java 8 trở lên.
-
-Tải mã nguồn: thư mục MiniBank chứa các file:
-
-MainApp.java
-
-LoginScreen.java
-
-Dashboard.java
-
-User.java
-
-Transaction.java
-
-Utils.java
-
-- **Bước 2: Biên dịch mã nguồn**  
-
+- **Bước 1: Biên dịch toàn bộ source**  
   ```bash
   javac MiniBank/*.java
-Nếu thành công, sẽ tạo ra các file .class.
+Bước 2: Khởi động server
 
+bash
+Copy code
+java MiniBank.Server
+Server sẽ chọn một cổng trống và ghi vào file server_port.txt.
 
-- **Bước 3: Chạy ứng dụng** 
+Bước 3: Khởi động client
 
-  ```bash
-  java MiniBank.MainApp
-Ứng dụng sẽ hiển thị màn hình đăng nhập.
+bash
+Copy code
+java MiniBank.ClientLogin
+Client sẽ đọc cổng từ server_port.txt và kết nối tới server.
 
 🚀 Sử dụng ứng dụng
 
-🔑 Đăng nhập: nhập tên tài khoản và mật khẩu đã đăng ký.
+Đăng nhập bằng tài khoản đã đăng ký hoặc tạo tài khoản mới.
 
-🆕 Đăng ký: tạo tài khoản mới, hệ thống sinh số tài khoản ngẫu nhiên.
+Thực hiện các thao tác nạp tiền, rút tiền, chuyển khoản, đổi mật khẩu.
 
-💵 Nạp tiền: chọn "Nạp tiền", nhập số tiền.
+Xem số dư hiện tại và lịch sử giao dịch ngay trên giao diện.
 
-🏧 Rút tiền: chọn "Rút tiền", nhập số tiền.
+Quản lý thông tin khách hàng (dành cho admin).
 
-💳 Chuyển khoản: nhập số tài khoản người nhận và số tiền.
-
-ℹ️ Xem thông tin: chọn "Thông tin TK".
-
-🔑 Đổi mật khẩu: thay đổi mật khẩu hiện tại.
-
-📜 Xem lịch sử giao dịch: bảng hiển thị chi tiết giao dịch ngay trên giao diện chính.
-
-🚪 Thoát: chọn "Thoát".
-
-👤 Thông tin cá nhân
+👤 Thông tin tác giả
 
 Họ và tên: Đỗ Trọng Minh Tiến
 
