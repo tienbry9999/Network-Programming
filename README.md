@@ -4,13 +4,13 @@
     </a>
 </h2>
 <h2 align="center">
-   HỆ THỐNG QUẢN LÝ NGÂN HÀNG MINI
+    HỆ THỐNG QUẢN LÝ NGÂN HÀNG MINI
 </h2>
 <div align="center">
     <p align="center">
-        <img src="docs/aiotlab_logo.png" alt="AIoTLab Logo" width="170"/>
-        <img src="docs/fitdnu_logo.png" alt="AIoTLab Logo" width="180"/>
-        <img src="docs/dnu_logo.png" alt="DaiNam University Logo" width="200"/>
+        <img alt="AIoTLab Logo" width="170" src="https://github.com/user-attachments/assets/711a2cd8-7eb4-4dae-9d90-12c0a0a208a2" />
+        <img alt="AIoTLab Logo" width="180" src="https://github.com/user-attachments/assets/dc2ef2b8-9a70-4cfa-9b4b-f6c2f25f1660" />
+        <img alt="DaiNam University Logo" width="200" src="https://github.com/user-attachments/assets/77fe0fd1-2e55-4032-be3c-b1a705a1b574" />
     </p>
 
 [![AIoTLab](https://img.shields.io/badge/AIoTLab-green?style=for-the-badge)](https://www.facebook.com/DNUAIoTLab)
@@ -19,6 +19,7 @@
 
 </div>
 
+---
 
 📖 **1. Giới thiệu hệ thống**  
 
@@ -108,14 +109,15 @@ Chức năng chính:
 
 🔑 Đổi mật khẩu | 🚪 Đăng xuất
 
-📝**5. Thông tin liên hệ**
-
-Họ tên: Đỗ Trọng Minh Tiến
-
-Lớp: CNTT 16-03
-
+## 5. Thông tin liên hệ  
+Họ tên: Đỗ Trọng Minh Tiến  
+Lớp: CNTT 16-03.  
 Email: dotrongminhtien.qc2004@gmail.com
 
 © 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
+
+---
+
+
 
 
