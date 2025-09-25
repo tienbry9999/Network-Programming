@@ -42,23 +42,22 @@
 
 📖 **1. Giới thiệu hệ thống**  
 
-Ứng dụng **MiniBank** được phát triển bằng **Java Swing** cho phép người dùng quản lý tài khoản ngân hàng cá nhân.  
-Hệ thống hỗ trợ: **nạp tiền, rút tiền, chuyển khoản, đổi mật khẩu, xem số dư và lịch sử giao dịch**.  
+Ứng dụng **MiniBank** được phát triển bằng **Java Swing** cho phép quản lý tài khoản ngân hàng cá nhân với các chức năng cơ bản: **nạp tiền, rút tiền, chuyển khoản, đổi mật khẩu, xem số dư và lịch sử giao dịch**.  
 
 **Các module chính:**  
-- **LoginScreen**: đăng nhập/đăng ký.  
-- **Dashboard**: quản lý số dư & thao tác giao dịch.  
-- **AccountInfo**: xử lý dữ liệu tài khoản, số dư, lịch sử.  
-- **Client/Server**: trao đổi dữ liệu và xử lý yêu cầu người dùng.  
+- `LoginScreen`: đăng nhập/đăng ký  
+- `Dashboard`: giao diện chính  
+- `AccountInfo`: xử lý dữ liệu tài khoản  
+- `Client/Server`: trao đổi và xử lý yêu cầu  
 
 ---
 
 🔧 **2. Công nghệ sử dụng**  
 
-- **Java Core**: OOP, Collections (`ArrayList`, `HashMap`) để quản lý dữ liệu.  
-- **Java Swing**: xây dựng giao diện (`JFrame`, `JTabbedPane`, `JButton`, `JTextField`, …).  
-- **Lưu trữ file**: dữ liệu tài khoản và lịch sử được ghi/đọc từ file văn bản.  
-- **Hỗ trợ**: `LocalDateTime` cho thời gian giao dịch, `DecimalFormat` để định dạng tiền tệ.  
+- **Java Core**: OOP, Collections  
+- **Java Swing**: xây dựng giao diện  
+- **Lưu trữ file**: ghi/đọc dữ liệu tài khoản, lịch sử  
+- **Hỗ trợ**: `LocalDateTime`, `DecimalFormat`  
 
 ---
 
@@ -77,72 +76,51 @@ Hệ thống hỗ trợ: **nạp tiền, rút tiền, chuyển khoản, đổi m
 </p>
 
 <p align="center">
-  <img src="image-2.png" alt="Màn hình hiển thị giao diện chính" width="500"/>
+  <img src="image-2.png" alt="Màn hình chính" width="500"/>
   <br>
-  <em>Hình 3. Màn hình hiển thị giao diện chính</em>
+  <em>Hình 3. Màn hình chính</em>
 </p>
 
 <p align="center">
   <img src="image-3.png" alt="Giao diện chuyển khoản" width="500"/>
   <br>
-  <em>Hình 4. Giao diện chuyển khoản</em>
+  <em>Hình 4. Chuyển khoản</em>
 </p>
 
 <p align="center">
-  <img src="image-4.png" alt="Giao diện thông tin chuyển khoản" width="500"/>
+  <img src="image-4.png" alt="Thông tin chuyển khoản" width="500"/>
   <br>
-  <em>Hình 5. Giao diện thông tin chuyển khoản</em>
+  <em>Hình 5. Thông tin chuyển khoản</em>
 </p>
 
 <p align="center">
-  <img src="image-5.png" alt="Giao diện nạp tiền" width="500"/>
+  <img src="image-5.png" alt="Nạp tiền" width="500"/>
   <br>
-  <em>Hình 6. Giao diện nạp tiền</em>
+  <em>Hình 6. Nạp tiền</em>
 </p>
 
 <p align="center">
-  <img src="image-6.png" alt="Giao diện rút tiền" width="500"/>
+  <img src="image-6.png" alt="Rút tiền" width="500"/>
   <br>
-  <em>Hình 7. Giao diện rút tiền</em>
+  <em>Hình 7. Rút tiền</em>
 </p>
 
 ---
 
-📝 **4. Hướng dẫn cài đặt và sử dụng**  
+📝 **4. Cài đặt & Sử dụng**  
 
-**🔧 Yêu cầu hệ thống**  
-- **JDK**: 8 trở lên  
-- **Hệ điều hành**: Windows / macOS / Linux  
-- **IDE**: Eclipse, IntelliJ IDEA, VS Code hoặc terminal  
-- **RAM**: ≥ 512MB, Ổ đĩa ≥ 10MB  
+**Yêu cầu:** JDK 8+, Windows/macOS/Linux, IDE (Eclipse/IntelliJ/VS Code) hoặc terminal.  
 
-**📦 Cài đặt và triển khai**  
-
-- **Bước 1: Kiểm tra Java**  
-  ```bash
-  java -version
-  javac -version
-Yêu cầu Java 8+.
-
-Bước 2: Tải mã nguồn
-Thư mục MiniBank chứa các file:
-MainApp.java, LoginScreen.java, Dashboard.java, AccountInfo.java, ClientMain.java
-
-Bước 3: Biên dịch
-
-bash
-Copy code
+**Cách chạy:**  
+```bash
+# Biên dịch
 javac MiniBank/*.java
-Bước 4: Chạy ứng dụng
 
-bash
-Copy code
+# Chạy chương trình
 java MiniBank.MainApp
-Ứng dụng sẽ mở màn hình đăng nhập.
+Chức năng chính:
 
-Cách sử dụng:
-
-🔑 Đăng nhập/Đăng ký tài khoản
+🔑 Đăng nhập / Đăng ký
 
 💵 Nạp tiền | 🏧 Rút tiền | 💳 Chuyển khoản
 
@@ -160,9 +138,4 @@ Email: dotrongminhtien.qc2004@gmail.com
 
 © 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
 
-yaml
-Copy code
 
----
-
-Bạn có muốn mình thêm **sơ đồ kiến trúc (Client ↔ Server ↔ File)** bằng Mermaid diagram vào README đ
